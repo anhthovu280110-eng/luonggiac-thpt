@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lượng Giác 11</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #315efb, #6c63ff);
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #315efb;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #315efb;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #ddd;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #315efb;
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.formula {
+    background: #eef2ff;
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+button {
+    background: #315efb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #244bd0;
+}
+
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #202535;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📐 LƯỢNG GIÁC 11</h1>
+    <p>Học lượng giác dễ hiểu – trực quan – thú vị</p>
+</header>
+
+<nav>
+    <a href="#kienthuc">📚 Kiến thức</a>
+    <a href="#congthuc">🧮 Công thức</a>
+    <a href="#luyentap">🎯 Luyện tập</a>
+</nav>
+
+<div class="container">
+
+<section id="kienthuc">
+    <h2>📚 Kiến thức lượng giác</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🔵 Góc và cung lượng giác</h3>
+            <p>
+                Góc lượng giác được xác định bởi tia đầu,
+                tia cuối và chiều quay.
+            </p>
+            <div class="formula">
+                180° = π rad
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📊 Giá trị lượng giác</h3>
+            <p>
+                Các giá trị cơ bản gồm sin, cos, tan và cot.
+            </p>
+            <div class="formula">
+                tan x = sin x / cos x
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📈 Hàm số lượng giác</h3>
+            <p>
+Tìm hiểu đặc điểm và đồ thị của các hàm
+                sin x, cos x, tan x.
+            </p>
+            <div class="formula">
+                y = sin x
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🧮 Phương trình lượng giác</h3>
+            <p>
+                Các phương trình lượng giác cơ bản
+                và phương pháp giải.
+            </p>
+            <div class="formula">
+                sin x = a
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="congthuc" style="margin-top:50px;">
+    <h2>🧮 Một số công thức quan trọng</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Công thức cơ bản</h3>
+            <div class="formula">
+                sin²x + cos²x = 1
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Công thức cộng</h3>
+            <div class="formula">
+                sin(a + b) = sin a cos b + cos a sin b
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Công thức nhân đôi</h3>
+            <div class="formula">
+                sin 2x = 2sin x cos x
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="luyentap" style="margin-top:50px;">
+    <h2>🎯 Luyện tập</h2>
+
+    <div class="card">
+        <h3>Câu 1</h3>
+
+        <p style="margin-top:15px;">
+            Giá trị của sin²x + cos²x bằng bao nhiêu?
+        </p>
+
+        <button onclick="checkAnswer(1)">1</button>
+        <button onclick="checkAnswer(2)">2</button>
+        <button onclick="checkAnswer(0)">0</button>
+
+        <div id="result"></div>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    <p>Website học tập Lượng Giác 11</p>
+    <p>Đề tài Khoa học kỹ thuật</p>
+</footer>
+
+<script>
+function checkAnswer(answer) {
+
+    let result = document.getElementById("result");
+
+    if (answer === 1) {
+        result.innerHTML = "✅ Chính xác! Bạn đã trả lời đúng.";
+        result.style.color = "green";
+    } else {
+        result.innerHTML = "❌ Chưa đúng. Hãy nhớ: sin²x + cos²x = 1";
+        result.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>
